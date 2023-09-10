@@ -221,22 +221,26 @@
     display: flex;
     justify-content: space-between;
     position: sticky;
-    background-color: $dark;
+    z-index: 1;
     top: 50px;
+    background-color: $dark;
     .btn-all-task {
       @include btn-primary;
       flex: 1;
       border-radius: 0;
+      background-color: $dark;
     }
     .btn-todo {
       @include btn-primary;
       flex: 1;
       border-radius: 0;
+      background-color: $dark;
     }
     .btn-done {
       @include btn-primary;
       flex: 1;
       border-radius: 0;
+      background-color: $dark;
     }
   }
   .tab-active {
