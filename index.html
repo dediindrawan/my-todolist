@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todolist</title>
+    <!-- information handling referer on http request -->
+    <meta name="referrer" content="no-referrer">
+    <!-- SEO meta tag -->
+    <meta name="description"
+        content="Hello World! Welcome to Dedi Indrawan Portfolio site. You are on the right place to looking for Web Developer. Let's explore this site to find something awesome!!">
+    <meta name="keywords" content="dedi indrawan, front end web developer, web programmer, content creator">
+    <meta name="author" content="Dedi Indrawan">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- open graph meta data -->
+    <meta property="og:title" content="My Todolist Web Application">
+    <meta property="og:description"
+        content="Hello World! Welcome to Dedi Indrawan Portfolio site. You are on the right place to looking for Web Developer. Let's explore this site to find something awesome!!">
+    <meta property="og:image" content="https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg">
+    <meta property="og:url" content="https://dediindrawan.github.io/personal-portfolio">
+    <!-- favicon -->
+    <link rel="icon" href="./public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
+    <!-- connecting to css file -->
+    <link rel="stylesheet" href="public/css/style.css">
+    <!-- import cdn font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="toast-popup"></div>
+
+    <div class="boarding-container">
+        <h1 class="boarding-title">My Todolist</h1>
+        <h2>&#x1f44b; Welcome Back!</h2>
+        <p>Enter your name and start your daily tasks with excellent.</p>
+        <form class="boarding-form">
+            <div class="input-section">
+                <input type="text" class="username-input-boarding" placeholder="your name" autofocus autocomplete="off">
+                <small class="error-message-input-boarding">Error message</small>
+            </div>
+            <button type="submit" class="btn-save">Save</button>
+        </form>
+        <small class="boarding-credit">My Todolist is update version from <a href="https://dediindrawan.github.io/todo-app/" target="_blank">TodoApp</a><br>All Made With Coffee &copy; <span></span> | <a
+                href="https://dediindrawan.github.io/personal-portfolio" target="_blank">Dedi
+                Indrawan</a></small>
+    </div>
+
+    <div class="main-container">
+        <div class="brand-area">
+            <a href="index.html" class="brand">My Todolist</a>
+        </div>
+
+        <header class="header">
+            <div class="profile-header">
+                <div class="display-picture">
+                    <img class="user-image" src="" alt="user image">
+                </div>
+                <ul class="task-viewer">
+                    <li>
+                        <span class="total-task">0</span>
+                        <span>Task</span>
+                    </li>
+                    <li>
+                        <span class="total-todo">0</span>
+                        <span>Todo</span>
+                    </li>
+                    <li>
+                        <span class="total-done">0</span>
+                        <span>Done</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="profile-control">
+                <div class="greeting"></div>
+                <h3 class="display-name"></h3>
+
+                <div class="time-viewer">
+                    <div class="wrapper">
+                        <div class="day"></div>
+                        <div class="date"></div>
+                    </div>
+                    <div class="clock"></div>
+                </div>
+
+                <div class="btn-header">
+                    <button class="btn-edit-profile" onclick="btnEditProfile()">Edit Profile</button>
+                    <button class="btn-clear-all-tasks">Clear Tasks</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="tab-menu">
+            <button type="submit" class="btn-all-task tab-active"><i class="fa-solid fa-list-ul"></i></button>
+            <button type="submit" class="btn-todo"><i class="fa-solid fa-bars-progress"></i></button>
+            <button type="submit" class="btn-done"><i class="fa-solid fa-list-check"></i></button>
+        </div>
+
+        <main class="wrapper-todolist">
+            <ul class="wrapper-task"></ul>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <form action="index.html" class="form-task">
+            <div class="input-section">
+                <input type="text" class="task-input" placeholder="Create new task..." autofocus>
+            </div>
+            <button type="submit" class="btn-create">Create</button>
+        </form>
+    </footer>
+
+    <script src="public/javascript/index.js"></script>
+    <script src="public//javascript/script.js"></script>
+</body>
+
+</html>

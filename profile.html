@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | My Todolist</title>
+    <!-- information handling referer on http request -->
+    <meta name="referrer" content="no-referrer">
+    <!-- SEO meta tag -->
+    <meta name="description"
+        content="Hello World! Welcome to Dedi Indrawan Portfolio site. You are on the right place to looking for Web Developer. Let's explore this site to find something awesome!!">
+    <meta name="keywords" content="dedi indrawan, front end web developer, web programmer, content creator">
+    <meta name="author" content="Dedi Indrawan">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- open graph meta data -->
+    <meta property="og:title" content="My Todolist Web Application">
+    <meta property="og:description"
+        content="Hello World! Welcome to Dedi Indrawan Portfolio site. You are on the right place to looking for Web Developer. Let's explore this site to find something awesome!!">
+    <meta property="og:image" content="https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg">
+    <meta property="og:url" content="https://dediindrawan.github.io/personal-portfolio">
+    <!-- favicon -->
+    <link rel="icon" href="./public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
+    <!-- connecting to css file -->
+    <link rel="stylesheet" href="public/css/style.css">
+    <!-- import cdn font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="edit-profile-container">
+        <div class="wrapper-navbar">
+            <a href="index.html" style="margin-right: 1em;"><i class="fa-solid fa-xmark"></i></a>
+            <h4 class="edit-profile-title">Edit Profile</h4>
+        </div>
+        <form action="index.html" class="form-edit-profile">
+            <div class="wrapper">
+                <img class="preview-image" src="" alt="preview image">
+                <label for="file">Change Photo</label>
+                <input type="file" class="file-upload" id="file">
+            </div>
+            <div class="input-section">
+                <input type="text" class="username-input-edit-profile" placeholder="your name">
+                <small class="error-message-input-edit-profile">Error message</small>
+            </div>
+            <button type="submit" class="btn-save-change">Save Change</button>
+        </form>
+        <button type="submit" class="btn-remove-profile" onclick="removeProfile()"><i class="fa-solid fa-trash-can"
+                style="margin-right: .3em;"></i>Remove profile</button>
+    </div>
+
+    <script src="public/javascript/app.js"></script>
+</body>
+
+</html>

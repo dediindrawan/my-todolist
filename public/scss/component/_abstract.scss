@@ -1,0 +1,12 @@
+@use '../global/color' as color;
+
+// box shadow
+$sd-outline: 0 0 0 2px color.$default, 0 0 0 4px color.$primary;
+
+// border radius
+$rd-rounded: 50%;
+$rd-5: 5px;
+$rd-10: 10px;
+
+// transition
+$transition: 0.3s ease-in-out;

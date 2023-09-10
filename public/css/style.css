@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #f5f5f5;
+  background-color: #0095f6;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input[type=text] {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: inherit;
+}
+input[type=text]:focus {
+  outline: none;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+button,
+button[type=submit] {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+html,
+body {
+  line-height: 1.65;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  scroll-behavior: smooth;
+  color: #f5f5f5;
+  background-color: #000000;
+}
+
+.toast-popup {
+  width: 100%;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  background-color: #ff3040;
+}
+
+.show-toast {
+  left: 0;
+}
+
+.task-notification {
+  margin-top: 2em;
+  text-align: center;
+}
+.task-notification i {
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+}
+
+.boarding-container {
+  min-height: 100vh;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #000000;
+  position: relative;
+  z-index: 2;
+}
+.boarding-container .boarding-title {
+  margin-bottom: 2em;
+  text-align: center;
+  font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+  font-family: "Dancing Script", cursive;
+}
+.boarding-container h2 {
+  margin-bottom: 0.5em;
+}
+.boarding-container .boarding-form {
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+.boarding-container .boarding-form .input-section {
+  margin-bottom: 1em;
+}
+.boarding-container .boarding-form .input-section .username-input-boarding {
+  width: 100%;
+  padding: 1em;
+  text-transform: capitalize;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  color: #f5f5f5;
+  transition: border 0.3s ease-in-out;
+}
+.boarding-container .boarding-form .input-section .username-input-boarding:focus {
+  border: 1px solid #0095f6;
+}
+.boarding-container .boarding-form .input-section .error-message-input-boarding {
+  font-style: italic;
+  color: #ff3040;
+  display: none;
+}
+.boarding-container .boarding-form .btn-save {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  width: 100%;
+  background-color: #0095f6;
+}
+.boarding-container .boarding-credit {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.edit-profile-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1em;
+}
+.edit-profile-container .wrapper-navbar {
+  margin-bottom: 3em;
+  display: flex;
+  align-items: center;
+}
+.edit-profile-container .wrapper-navbar a {
+  font-size: clamp(1.17rem, 4vw + 1rem, 1.5rem);
+}
+.edit-profile-container .form-edit-profile {
+  margin-bottom: 5em;
+}
+.edit-profile-container .form-edit-profile .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-profile-container .form-edit-profile .wrapper img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 0 0 0 4px #000000, 0 0 0 8px #262626;
+  border-radius: 50%;
+  background-color: #262626;
+}
+.edit-profile-container .form-edit-profile .wrapper label {
+  margin: 1em 0;
+  font-size: clamp(0.83rem, 4vw - 1rem, 1rem);
+  cursor: pointer;
+  color: #0095f6;
+}
+.edit-profile-container .form-edit-profile .wrapper .file-upload {
+  display: none;
+}
+.edit-profile-container .form-edit-profile .input-section {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.edit-profile-container .form-edit-profile .input-section .username-input-edit-profile {
+  width: 100%;
+  padding: 1em;
+  text-transform: capitalize;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  color: #f5f5f5;
+  transition: border 0.3s ease-in-out;
+}
+.edit-profile-container .form-edit-profile .input-section .username-input-edit-profile:focus {
+  border: 1px solid #0095f6;
+}
+.edit-profile-container .form-edit-profile .input-section .error-message-input-edit-profile {
+  font-style: italic;
+  color: #ff3040;
+  display: none;
+}
+.edit-profile-container .form-edit-profile .btn-save-change {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #0095f6;
+}
+.edit-profile-container .btn-remove-profile {
+  padding: 0;
+  color: #ff3040;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 1em;
+  display: none;
+}
+.main-container .brand-area {
+  width: 100%;
+  height: 50px;
+  padding: 0 1em;
+  line-height: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+.main-container .brand-area .brand {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.25rem);
+}
+.main-container .header {
+  margin-top: 65px;
+}
+.main-container .header .profile-header {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+}
+.main-container .header .profile-header .display-picture {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 4px #000000, 0 0 0 8px #262626;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #262626;
+}
+.main-container .header .profile-header .display-picture .user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-container .header .profile-header .task-viewer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .header .profile-header .task-viewer li {
+  width: calc(33.33% - 1em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container .header .profile-control {
+  text-transform: capitalize;
+}
+.main-container .header .profile-control .display-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main-container .header .profile-control .time-viewer {
+  margin-top: 1em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #262626;
+}
+.main-container .header .profile-control .btn-header {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+.main-container .header .profile-control .btn-header .btn-edit-profile {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  width: 50%;
+  background-color: #262626;
+}
+.main-container .header .profile-control .btn-header .btn-clear-all-tasks {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  width: 50%;
+  background-color: #262626;
+}
+.main-container .tab-menu {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  background-color: #000000;
+  top: 50px;
+}
+.main-container .tab-menu .btn-all-task {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  flex: 1;
+  border-radius: 0;
+}
+.main-container .tab-menu .btn-todo {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  flex: 1;
+  border-radius: 0;
+}
+.main-container .tab-menu .btn-done {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  flex: 1;
+  border-radius: 0;
+}
+.main-container .tab-active {
+  margin-top: 2px;
+  border-bottom: 2px solid #f5f5f5;
+}
+.main-container .wrapper-todolist {
+  margin-top: 1em;
+  margin-bottom: 5.7em;
+}
+.main-container .wrapper-todolist .wrapper-task {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main-container .wrapper-todolist .wrapper-task .task-notification {
+  text-align: center;
+}
+.main-container .wrapper-todolist .wrapper-task .task-notification i {
+  font-size: 3rem;
+}
+.main-container .wrapper-todolist .wrapper-task li {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  border-radius: 10px;
+  border-left: 5px solid #0095f6;
+  background-color: #262626;
+}
+.main-container .wrapper-todolist .wrapper-task li .task-list {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .wrapper-todolist .wrapper-task li .task-list .checkbox {
+  width: 25px;
+  height: 25px;
+  accent-color: #0095f6;
+}
+.main-container .wrapper-todolist .wrapper-task li .task-list .checkbox:checked ~ p {
+  font-style: italic;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.main-container .wrapper-todolist .wrapper-task li .task-list p {
+  width: 100%;
+}
+.main-container .wrapper-todolist .wrapper-task li .menu-action {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .wrapper-todolist .wrapper-task li .menu-action i {
+  cursor: pointer;
+}
+.main-container .wrapper-todolist .wrapper-task li .menu-action i:first-child {
+  color: #ffa200;
+}
+.main-container .wrapper-todolist .wrapper-task li .menu-action i:last-child {
+  color: #ff3040;
+}
+
+.footer {
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
+.footer form {
+  display: flex;
+  gap: 0.5em;
+}
+.footer form .input-section {
+  width: 100%;
+}
+.footer form .input-section .task-input {
+  width: 100%;
+  padding: 1em;
+  text-transform: capitalize;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  color: #f5f5f5;
+  transition: border 0.3s ease-in-out;
+  flex: 1;
+  text-transform: none;
+  border: 1px solid #262626;
+}
+.footer form .input-section .task-input:focus {
+  border: 1px solid #0095f6;
+}
+.footer form .btn-create {
+  padding: 0.75em 1em;
+  border-radius: 10px;
+  color: #f5f5f5;
+  background-color: #0095f6;
+}

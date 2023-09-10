@@ -1,0 +1,329 @@
+@use './global/index' as *;
+
+.toast-popup {
+  width: $full;
+  padding: $p-1;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  background-color: $danger;
+}
+.show-toast {
+  left: 0;
+}
+
+.task-notification {
+  margin-top: $mt-2;
+  text-align: center;
+  i {
+    font-size: $ft-h1;
+  }
+}
+
+.boarding-container {
+  min-height: 100vh;
+  padding: $p-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $dark;
+  position: relative;
+  z-index: 2;
+  .boarding-title {
+    margin-bottom: $mb-2;
+    text-align: center;
+    font-size: $ft-h1;
+    font-family: $ft-secondary;
+  }
+  h2 {
+    margin-bottom: 0.5em;
+  }
+  .boarding-form {
+    margin-top: $mt-1;
+    margin-bottom: $mb-5;
+    .input-section {
+      margin-bottom: $mb-1;
+      .username-input-boarding {
+        @include input-primary;
+      }
+      .error-message-input-boarding {
+        font-style: italic;
+        color: $danger;
+        display: none;
+      }
+    }
+    .btn-save {
+      @include btn-primary;
+      width: $full;
+      background-color: $primary;
+    }
+  }
+  .boarding-credit {
+    margin-top: $mt-5;
+    text-align: center;
+  }
+}
+
+.edit-profile-container {
+  width: $full;
+  min-height: 100vh;
+  padding: $p-1;
+  .wrapper-navbar {
+    margin-bottom: $mb-3;
+    display: flex;
+    align-items: center;
+    a {
+      font-size: $ft-h3;
+    }
+  }
+  .form-edit-profile {
+    margin-bottom: $mb-5;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        overflow: hidden;
+        box-shadow: 0 0 0 4px $dark, 0 0 0 8px $secondary;
+        border-radius: $rd-rounded;
+        background-color: $secondary;
+      }
+      label {
+        margin: $my-1;
+        font-size: $ft-h5;
+        cursor: pointer;
+        color: $primary;
+      }
+      .file-upload {
+        display: none;
+      }
+    }
+    .input-section {
+      margin-top: $mt-1;
+      display: flex;
+      flex-direction: column;
+      .username-input-edit-profile {
+        @include input-primary;
+      }
+      .error-message-input-edit-profile {
+        font-style: italic;
+        color: $danger;
+        display: none;
+      }
+    }
+    .btn-save-change {
+      @include btn-primary;
+      width: $full;
+      margin-top: $mt-2;
+      background-color: $primary;
+    }
+  }
+  .btn-remove-profile {
+    padding: 0;
+    color: $danger;
+  }
+}
+
+.main-container {
+  width: $full;
+  padding: $px-1;
+  display: none;
+  .brand-area {
+    width: $full;
+    height: 50px;
+    padding: $px-1;
+    line-height: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $dark;
+    .brand {
+      font-family: $ft-secondary;
+      font-size: $ft-h2;
+    }
+  }
+  .header {
+    margin-top: 65px;
+    .profile-header {
+      margin: $my-1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: $gap-3;
+      .display-picture {
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 4px $dark, 0 0 0 8px $secondary;
+        overflow: hidden;
+        border-radius: $rd-rounded;
+        background-color: $secondary;
+        .user-image {
+          width: $full;
+          height: $full;
+          object-fit: cover;
+        }
+      }
+      .task-viewer {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: calc(33.33% - $gap-1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+    .profile-control {
+      text-transform: capitalize;
+      .display-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .time-viewer {
+        margin-top: $mt-1;
+        padding: $p-1;
+        display: flex;
+        justify-content: space-between;
+        border-radius: $rd-10;
+        background-color: $secondary;
+      }
+      .btn-header {
+        margin-top: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        gap: $gap-thin;
+        .btn-edit-profile {
+          @include btn-primary;
+          width: $half;
+          background-color: $secondary;
+        }
+        .btn-clear-all-tasks {
+          @include btn-primary;
+          width: $half;
+          background-color: $secondary;
+        }
+      }
+    }
+  }
+  .tab-menu {
+    margin-top: $mt-2;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: $dark;
+    top: 50px;
+    .btn-all-task {
+      @include btn-primary;
+      flex: 1;
+      border-radius: 0;
+    }
+    .btn-todo {
+      @include btn-primary;
+      flex: 1;
+      border-radius: 0;
+    }
+    .btn-done {
+      @include btn-primary;
+      flex: 1;
+      border-radius: 0;
+    }
+  }
+  .tab-active {
+    margin-top: 2px;
+    border-bottom: 2px solid $default;
+  }
+  .wrapper-todolist {
+    margin-top: $mt-1;
+    margin-bottom: 5.7em;
+    .wrapper-task {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-1;
+      .task-notification {
+        text-align: center;
+        i {
+          font-size: 3rem;
+        }
+      }
+      li {
+        padding: $p-1;
+        display: flex;
+        justify-content: space-between;
+        gap: $gap-1;
+        border-radius: $rd-10;
+        border-left: 5px solid $primary;
+        background-color: $secondary;
+        .task-list {
+          width: 85%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .checkbox {
+            width: 25px;
+            height: 25px;
+            accent-color: $primary;
+            &:checked ~ p {
+              font-style: italic;
+              text-decoration: line-through;
+              opacity: 0.5;
+            }
+          }
+          p {
+            width: $full;
+          }
+        }
+        .menu-action {
+          width: 15%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          i {
+            cursor: pointer;
+            &:first-child {
+              color: $warning;
+            }
+            &:last-child {
+              color: $danger;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  padding: $p-1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $dark;
+  form {
+    display: flex;
+    gap: $gap-thin;
+    .input-section {
+      width: $full;
+      .task-input {
+        @include input-primary;
+        flex: 1;
+        text-transform: none;
+        border: 1px solid $secondary;
+      }
+    }
+    .btn-create {
+      @include btn-primary;
+      background-color: $primary;
+    }
+  }
+}

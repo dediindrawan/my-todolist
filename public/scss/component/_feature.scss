@@ -1,0 +1,23 @@
+@use './abstract' as abstract;
+@use '../global/color' as color;
+@use '../global/unit' as unit;
+@use '../global/font' as font;
+
+@mixin btn-primary {
+  padding: 0.75em 1em;
+  border-radius: abstract.$rd-10;
+  color: color.$default;
+}
+
+@mixin input-primary {
+  width: unit.$full;
+  padding: unit.$p-1;
+  text-transform: capitalize;
+  border: 1px solid color.$secondary;
+  border-radius: abstract.$rd-10;
+  color: color.$default;
+  transition: border 0.3s ease-in-out;
+  &:focus {
+    border: 1px solid color.$primary;
+  }
+}

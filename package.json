@@ -1,0 +1,14 @@
+{
+  "name": "new-todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch --no-source-map public/scss/main.scss public/css/style.css && rm public/css/style.css.map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}
