@@ -156,7 +156,7 @@ function timeViewer() {
 timeViewer();
 
 function btnEditProfile() {
-    location.href = 'profile.html';
+    location.href = 'https://dediindrawan.github.io/my-todolist/profile.html';
 };
 
 const navItems = document.querySelectorAll('.wrapper-navbar ul a li');
