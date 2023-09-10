@@ -21,8 +21,8 @@
     <meta property="og:image" content="https://i.postimg.cc/Gh8GfFGr/Dedi-Indrawan-Title.jpg">
     <meta property="og:url" content="https://dediindrawan.github.io/personal-portfolio">
     <!-- favicon -->
-    <link rel="icon" href="./public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="icon" href="public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="public/asset/dedi-indrawan-icon.ico" type="image/x-icon">
     <!-- connecting to css file -->
     <link rel="stylesheet" href="public/css/style.css">
     <!-- import cdn font awesome icon -->
@@ -32,18 +32,18 @@
 <body>
     <div class="edit-profile-container">
         <div class="wrapper-navbar">
-            <a href="https://dediindrawan.github.io/my-todolist/" style="margin-right: 1em;"><i
-                    class="fa-solid fa-xmark"></i></a>
+            <a href="index.html" style="margin-right: 1em;"><i class="fa-solid fa-xmark"></i></a>
             <h4 class="edit-profile-title">Edit Profile</h4>
         </div>
-        <form action="https://dediindrawan.github.io/my-todolist/" class="form-edit-profile">
+        <form action="index.html" class="form-edit-profile">
             <div class="wrapper">
                 <img class="preview-image" src="" alt="preview image">
                 <label for="file">Change Photo</label>
                 <input type="file" class="file-upload" id="file">
             </div>
             <div class="input-section">
-                <input type="text" class="username-input-edit-profile" placeholder="your name">
+                <input type="text" name="username" class="username-input-edit-profile" placeholder="your name"
+                    autocomplete="off">
                 <small class="error-message-input-edit-profile">Error message</small>
             </div>
             <button type="submit" class="btn-save-change">Save Change</button>
