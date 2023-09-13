@@ -280,8 +280,16 @@ body {
   padding: 1em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 10px;
   background-color: #262626;
+}
+.main-container .header .profile-control .time-viewer .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .header .profile-control .time-viewer .clock {
+  font-weight: 400;
 }
 .main-container .header .profile-control .btn-header {
   margin-top: 0.5em;

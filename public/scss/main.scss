@@ -195,8 +195,16 @@
         padding: $p-1;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         border-radius: $rd-10;
         background-color: $secondary;
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+        }
+        .clock {
+          font-weight: $ft-regular;
+        }
       }
       .btn-header {
         margin-top: 0.5em;

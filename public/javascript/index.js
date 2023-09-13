@@ -115,10 +115,9 @@ function timeViewer() {
     document.querySelector('.boarding-credit span').innerHTML = years;
 
     setInterval(function () {
-        let times = new Date(), hours, minutes, seconds, indicator;
+        let times = new Date(), hours, minutes, indicator;
         hours = times.getHours();
         minutes = times.getMinutes();
-        seconds = times.getSeconds();
         indicator = 'Am';
 
         if (hours >= 0 && hours <= 4) {
@@ -148,9 +147,8 @@ function timeViewer() {
 
         hours = hours < 10 ? '0' + hours : hours;
         minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        clock.innerHTML = `${hours}:${minutes}:${seconds} ${indicator}`;
+        clock.innerHTML = `${hours}:${minutes} ${indicator}`;
     }, 1000);
 };
 timeViewer();
